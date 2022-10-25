@@ -1,8 +1,6 @@
 import React from "react";
 
 const Navbar = () => {
-  console.log("new");
-
   return (
     <div
       className="navbar shadow-lg border-b-2"
