@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import { useAccount, useConnect, useContractRead, useDisconnect } from "wagmi";
+import { useAccount } from "wagmi";
 import { useEffect } from "react";
 import { Alchemy, Network } from "alchemy-sdk";
-import org from "../shared/images/organisation.webp";
-import individual from "../shared/images/individual.webp";
-import Card from "./Card";
 import Stats from "./Stats";
 import About from "./About";
 
@@ -28,7 +25,6 @@ const Hero = () => {
       const response = await alchemy.nft.getNftsForOwner(`${address}`);
       // Print NFTs
       return response;
-      console.log(response);
     };
 
     const runMain = async () => {
@@ -43,6 +39,7 @@ const Hero = () => {
       }
     };
     runMain();
+    // eslint-disable-next-line
   }, []);
 
   console.log(nfts);
