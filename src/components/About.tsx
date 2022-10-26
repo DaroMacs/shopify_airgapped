@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import org from "../shared/images/what-airgapped.webp";
 
 export const stylingObject = {
@@ -32,9 +33,11 @@ const About = () => {
             and people to attend those events in case their got the NFTs for a
             specific event. All this without revealing your NFTs.
           </p>
-          <button className="btn btn-primary" style={stylingObject.btn}>
-            Get Started
-          </button>
+          <Link to={"/users"}>
+            <button className="btn btn-primary" style={stylingObject.btn}>
+              Get Started
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Logo from "./Logo";
+import { Link } from "react-router-dom";
 
 export const stylingObject = {
   title: {
@@ -13,17 +14,19 @@ export const stylingObject = {
 const Navbar = () => {
   return (
     <div
-      className="navbar shadow-lg justify-between "
+      className="navbar shadow-lg justify-between fixed"
       style={{ background: "rgba(0, 0, 0, 0.7)" }}
     >
       <div>
         <Logo />
-        <h1
-          className="btn btn-ghost normal-case text-xl pl-0"
-          style={stylingObject.title}
-        >
-          AirGapped Evenths
-        </h1>
+        <Link to={"/"}>
+          <h1
+            className="btn btn-ghost normal-case text-xl pl-0"
+            style={stylingObject.title}
+          >
+            AirGapped Evenths
+          </h1>
+        </Link>
       </div>
 
       <ConnectButton />

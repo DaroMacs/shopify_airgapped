@@ -1,4 +1,5 @@
 import React from "react";
+import { stylingObject } from "./About";
 
 interface ICard {
   src: string;
@@ -15,7 +16,9 @@ const Card = ({ src, type }: ICard) => {
         <h2 className="card-title">{type}</h2>
         <p>If a dog chews shoes whose shoes does he choose?</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+          <button className="btn btn-primary" style={stylingObject.btn}>
+            Buy Now
+          </button>
         </div>
       </div>
     </div>

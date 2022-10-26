@@ -45,7 +45,7 @@ const Hero = () => {
   console.log(nfts);
 
   return (
-    <div className="grid content-center ">
+    <div className="grid content-center pt-16">
       <About />
       <div className=" flex justify-evenly m-0 gap-3"></div>
       <Stats />
