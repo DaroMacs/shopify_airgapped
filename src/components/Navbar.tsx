@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 export const stylingObject = {
   title: {
     background: "linear-gradient(45deg, #eb5d47, #87638a, #a4f9ff)",
-    "-webkit-background-clip": "text",
-    "-webkit-text-fill-color": "transparent"
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent"
   }
 };
 

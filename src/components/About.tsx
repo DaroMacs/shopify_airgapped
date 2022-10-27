@@ -5,13 +5,13 @@ import org from "../shared/images/what-airgapped.webp";
 export const stylingObject = {
   title: {
     background: "linear-gradient(45deg,#3caab2,#e28f82,  #87638a )",
-    "-webkit-background-clip": "text",
-    "-webkit-text-fill-color": "transparent"
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent"
   },
   btn: {
     background: "linear-gradient(45deg, #eb5d47, #87638a, #a4f9ff)",
-    "-webkit-background-clip": "text",
-    "-webkit-text-fill-color": "transparent"
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent"
   }
 };
 

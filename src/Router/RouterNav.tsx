@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Attendee from "../components/Attendee";
+import Attendee from "../components/Attendee/Attendee";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Organizer from "../components/Organizer";
