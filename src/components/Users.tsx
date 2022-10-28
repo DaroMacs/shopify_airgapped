@@ -10,12 +10,15 @@ const textCard = {
   btnTextOrg: "I'm an Organizer",
   btnTextAtt: "I'm an Attendee",
   organizer: "organizer",
-  attendee: "attendee"
+  attendee: "attendee",
 };
 
 const Users = () => {
   return (
-    <div className="flex  h-screen max-h-screen">
+    <div
+      className="flex  h-screen max-h-screen"
+      style={{ marginTop: "-2.5rem" }}
+    >
       <motion.div
         initial={{ y: 200 }}
         animate={{ y: 0 }}

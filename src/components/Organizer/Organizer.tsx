@@ -3,10 +3,15 @@ import TableEvents from "./TableEvents";
 import { useAccount } from "wagmi";
 import { useEffect } from "react";
 import { Alchemy, Network } from "alchemy-sdk";
-import TableNFTS from "./TableNFTS";
-import { IEventsProps } from "../Organizer/Organizer";
+import Formular from "./Formular";
+import { IEvents } from "../../Router/RouterNav";
 
-const Attendee = ({ events, setEvents }: IEventsProps) => {
+export interface IEventsProps {
+  setEvents: React.Dispatch<React.SetStateAction<IEvents[]>>;
+  events: IEvents[];
+}
+
+const Organizer = ({ events, setEvents }: IEventsProps) => {
   const { address } = useAccount();
   const [nfts, setNfts] = useState<any>();
   const [isLoading, setIsLoading] = useState(false);
@@ -47,13 +52,16 @@ const Attendee = ({ events, setEvents }: IEventsProps) => {
   console.log(nfts);
 
   return (
-    <div className="flex gap-3 justify-evenly">
-      <TableEvents nfts={nfts} isLoading={isLoading} />
-      <TableNFTS nfts={nfts} isLoading={isLoading} />
-
-      {/* <TableEvents nfts={nfts} /> */}
+    <div className="flex gap-3 justify-evenly items-start">
+      <TableEvents
+        nfts={nfts}
+        isLoading={isLoading}
+        events={events}
+        setEvents={setEvents}
+      />
+      <Formular events={events} setEvents={setEvents} />
     </div>
   );
 };
 
-export default Attendee;
+export default Organizer;

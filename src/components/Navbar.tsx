@@ -7,14 +7,14 @@ export const stylingObject = {
   title: {
     background: "linear-gradient(45deg, #eb5d47, #87638a, #a4f9ff)",
     WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent"
-  }
+    WebkitTextFillColor: "transparent",
+  },
 };
 
 const Navbar = () => {
   return (
     <div
-      className="navbar shadow-lg justify-between fixed"
+      className="navbar shadow-lg justify-between "
       style={{ background: "rgba(0, 0, 0, 0.7)" }}
     >
       <div>

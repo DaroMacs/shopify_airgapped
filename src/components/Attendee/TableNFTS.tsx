@@ -5,13 +5,7 @@ import { Contract } from "ethers";
 import { shortenWalletAddress } from "../../utils/shortenWallet";
 import { Link } from "react-router-dom";
 
-const TableEvents = ({
-  nfts,
-  isLoading,
-}: {
-  nfts: any;
-  isLoading: boolean;
-}) => {
+const TableNFTS = ({ nfts, isLoading }: { nfts: any; isLoading: boolean }) => {
   console.log(nfts);
 
   console.log(
@@ -23,7 +17,7 @@ const TableEvents = ({
   return (
     <div className="flex flex-col items-center justify-between pt-24 mb-16">
       <div className="bg-gray-800 px-3 rounded-xl mb-5 font-medium text-cyan-100 text-lg">
-        <p>Your NFTs</p>
+        <p>Your NFTs Events</p>
       </div>
 
       <table className="table text-gray-800 w-full">
@@ -83,4 +77,4 @@ const TableEvents = ({
   );
 };
 
-export default TableEvents;
+export default TableNFTS;
