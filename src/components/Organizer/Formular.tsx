@@ -57,7 +57,7 @@ const Formular = ({ events, setEvents }: IEventsProps) => {
         imgUrl,
         date,
       );
-      // await wait(transaction);
+      await wait(transaction);
       setIsLoading(false);
     }
   };
