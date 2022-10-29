@@ -4,12 +4,12 @@
       "inputs": [
         {
           "internalType": "string",
-          "name": "imgUrl",
+          "name": "name",
           "type": "string"
         },
         {
           "internalType": "string",
-          "name": "name",
+          "name": "eventAddress",
           "type": "string"
         },
         {
@@ -19,7 +19,7 @@
         },
         {
           "internalType": "string",
-          "name": "eventAddress",
+          "name": "imgUrl",
           "type": "string"
         },
         {
@@ -50,22 +50,22 @@
       "outputs": [
         {
           "internalType": "string",
-          "name": "eventAddress",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "imgUrl",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
           "name": "name",
           "type": "string"
         },
         {
           "internalType": "string",
+          "name": "eventAddress",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
           "name": "description",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "imgUrl",
           "type": "string"
         },
         {
@@ -85,22 +85,22 @@
           "components": [
             {
               "internalType": "string",
-              "name": "eventAddress",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "imgUrl",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
               "name": "name",
               "type": "string"
             },
             {
               "internalType": "string",
+              "name": "eventAddress",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
               "name": "description",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "imgUrl",
               "type": "string"
             },
             {

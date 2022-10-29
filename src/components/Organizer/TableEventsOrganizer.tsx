@@ -1,19 +1,12 @@
-import React, { useState } from "react";
-import individual from "../../shared/images/individual.webp";
-import { useEffect } from "react";
-import { Contract } from "ethers";
+import React from "react";
 import { shortenWalletAddress } from "../../utils/shortenWallet";
-import { Link } from "react-router-dom";
 import { IEventsProps } from "./Organizer";
 
-interface IProps extends IEventsProps {
-  nfts: any;
-  isLoading: boolean;
-}
+interface IProps extends IEventsProps {}
 
-const TableEvents = ({ isLoading, events, setEvents }: IProps) => {
+const TableEvents = ({ events }: IProps) => {
   return (
-    <div className="flex flex-col items-center justify-between pt-24 mb-16  ">
+    <div className="flex flex-col items-center justify-between mb-16  ">
       <div className="bg-gray-800 px-3 rounded-xl mb-5 font-medium text-cyan-100 text-lg">
         <p>Your Events</p>
       </div>
@@ -47,7 +40,7 @@ const TableEvents = ({ isLoading, events, setEvents }: IProps) => {
               <td className="uppercase">
                 {event?.name !== undefined
                   ? event?.name
-                  : event?.name.substring(0, 16)}
+                  : event?.name?.substring(0, 16)}
               </td>
               <td>
                 <a
@@ -55,7 +48,7 @@ const TableEvents = ({ isLoading, events, setEvents }: IProps) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {shortenWalletAddress(event?.address)}
+                  {shortenWalletAddress(event?.eventAddress)}
                 </a>
               </td>
               <td>{event?.date}</td>

@@ -1,24 +1,12 @@
-import React, { useState } from "react";
-import individual from "../../shared/images/individual.webp";
-import { useEffect } from "react";
-import { Contract } from "ethers";
+import React from "react";
 import { shortenWalletAddress } from "../../utils/shortenWallet";
-import { Link } from "react-router-dom";
 import { InfinitySpin } from "react-loader-spinner";
 
 const TableNFTS = ({ nfts, isLoading }: { nfts: any; isLoading: boolean }) => {
-  console.log(nfts);
-
-  console.log(
-    nfts?.ownedNfts.map((nft: any) =>
-      console.log(nft.media[0].gateway.includes(".mp4")),
-    ),
-  );
-
   return (
-    <div className="flex flex-col items-center justify-between pt-24 mb-16">
+    <div className="flex flex-col items-center justify-between  mb-16 flex-initial">
       <div className="bg-gray-800 px-3 rounded-xl mb-5 font-medium text-cyan-100 text-lg">
-        <p>Your NFTs Events</p>
+        <p>Your NFTs</p>
       </div>
       {isLoading ? (
         <InfinitySpin width="200" color="#4d97a9" />
@@ -27,14 +15,12 @@ const TableNFTS = ({ nfts, isLoading }: { nfts: any; isLoading: boolean }) => {
           <thead>
             <tr>
               <th></th>
-
               <th>Name</th>
               <th>Address</th>
               <th>Token</th>
             </tr>
           </thead>
           <tbody>
-            <div />
             {nfts?.ownedNfts.map((nft: any) => (
               <tr className="hover">
                 <td>

@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import TableEvents from "./TableEvents";
+import TableEvents from "./TableEventsAttendee";
 import { useAccount } from "wagmi";
 import { useEffect } from "react";
 import { Alchemy, Network } from "alchemy-sdk";
 import TableNFTS from "./TableNFTS";
 import { IEventsProps } from "../Organizer/Organizer";
+import { stylingObject } from "../About";
 
 const Attendee = ({ events, setEvents }: IEventsProps) => {
-  const { address } = useAccount();
+  const { address, isConnected } = useAccount();
   const [nfts, setNfts] = useState<any>();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -47,12 +48,20 @@ const Attendee = ({ events, setEvents }: IEventsProps) => {
   console.log(nfts);
 
   return (
-    <div className="flex gap-3 justify-evenly">
-      <TableEvents nfts={nfts} isLoading={isLoading} />
-      <TableNFTS nfts={nfts} isLoading={isLoading} />
-
-      {/* <TableEvents nfts={nfts} /> */}
-    </div>
+    <>
+      <h1
+        className=" flex pl-5 pt-12 pb-10 text-4xl align-middle justify-start font-bold"
+        style={stylingObject.title}
+      >
+        Attendee
+      </h1>
+      {isConnected && (
+        <div className="flex gap-3 justify-evenly items-start">
+          <TableNFTS nfts={nfts} isLoading={isLoading} />
+          <TableEvents nfts={nfts} isLoading={isLoading} events={events} />
+        </div>
+      )}
+    </>
   );
 };
 
