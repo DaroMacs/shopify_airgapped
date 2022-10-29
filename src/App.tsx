@@ -7,7 +7,13 @@ import { publicProvider } from "wagmi/providers/public";
 window.Buffer = window.Buffer || require("buffer").Buffer;
 
 const { chains, provider } = configureChains(
-  [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum],
+  [
+    chain.mainnet,
+    chain.polygon,
+    chain.optimism,
+    chain.arbitrum,
+    chain.polygonMumbai,
+  ],
   [
     alchemyProvider({ apiKey: "L-cyCh_HT4fXQlLCJwQFBxuZQ26dKHbo" }),
     publicProvider(),
