@@ -31,7 +31,6 @@ const RouterNav = () => {
     );
 
     const eventsFromSmartContract = await contract.getAllEvents();
-    console.log(eventsFromSmartContract);
 
     setEvents(eventsFromSmartContract);
   };
