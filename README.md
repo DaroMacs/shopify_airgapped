@@ -23,7 +23,18 @@ It will just cost you one click to login in the Attendee's page and you will be 
 
 AS mentioned before the same wallet could want to attend or create an event as well, no complications to have privileges to do so, I wanted to make it really easy to use.
 
-Anyways, 
+Anyways, in the Organizer page, on the left side the table shows all the events that are added by the organizer to the smart contract. On the right side there is a form where the organizer can add more evenths paying the fees because this is going to be on chain. So the table will show the new events added and on the Attendees page they will be able to see new evenths just in case their NFTs contract matches with the events contracts and therefore they will be allowed to attend
+
+<img width="1304" alt="image" src="https://user-images.githubusercontent.com/84887180/198787967-14a78110-06a3-4615-83c1-439b528ca33e.png">
+
+
+<img width="1312" alt="image" src="https://user-images.githubusercontent.com/84887180/198785042-19dedeff-ae42-44cd-aa2e-cdb525c35dae.png">
+
+
+So that's pretty much it, I wanted to offer a very user friendly solution to avoid any lost of costly NFTS just by the fact of fetching with Alchemy's API the owned NFTs by the user when they connect their wallets, so they dont take any risk to lose them.
+
+please feel free to reach me out any question about it
+
 
 # Getting Started with Create React App
 
