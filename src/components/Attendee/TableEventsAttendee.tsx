@@ -11,10 +11,13 @@ const TableEvents = ({
   isLoading: boolean;
   events: any;
 }) => {
-  const eventsAddress = events.map((event: any) => event.eventAddress);
+  const eventsAddress = events?.map((event: any) => event.eventAddress);
   const nftsAddress = nfts?.ownedNfts.map((nft: any) => nft?.contract.address);
 
-  const intersection = eventsAddress?.filter((element: string) =>
+  console.log({ eventsAddress });
+  console.log({ nftsAddress });
+
+  const intersection = eventsAddress?.filter((element: any) =>
     nftsAddress?.includes(element),
   );
 
