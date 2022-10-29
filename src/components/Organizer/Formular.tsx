@@ -27,7 +27,7 @@ const Formular = ({ events, setEvents }: IEventsProps) => {
 
     setEvents([...events, values]);
 
-    addDish();
+    addEvent();
     setName("");
     setDescription("");
     setEventAddress("");
@@ -36,7 +36,7 @@ const Formular = ({ events, setEvents }: IEventsProps) => {
   };
   console.log(events);
 
-  const addDish = async () => {
+  const addEvent = async () => {
     if (window.ethereum) {
       setIsLoading(true);
       const provider = new ethers.providers.Web3Provider(
