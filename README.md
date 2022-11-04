@@ -1,4 +1,5 @@
 # Full deployed demo
+Video of the demo: https://www.loom.com/share/dcb33fad43e74a4c9fae753d0c096ecd
 https://shopify-airgapped-daromacs.netlify.app/
 
 Remember to set Polygon Mumbai since the smart contract was deployed in such network
